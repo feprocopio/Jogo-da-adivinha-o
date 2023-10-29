@@ -1,0 +1,30 @@
+from random import randint
+cont = 0
+while True:
+    computador = randint(0, 11)
+    jogador = int(input('Digite um valor: '))
+    tot = computador + jogador
+    pi = str(input('Par ou Impar? [I/P] ')).upper().strip()
+    print(f'Você escolheu {jogador} e o Computador {computador}. Total de {tot}', end=' ')
+    print('DEU PAR 'if tot % 2 == 0 else 'DEU IMPAR')
+    if pi == 'P':
+        if tot % 2 == 0:
+            print('Você VENCEU! Jogue novamente...')
+            cont += 1
+        else:
+            print('GAME OVER!')
+            break
+    if pi == 'I':
+        if tot % 2 == 1:
+            print('Você VENCEU! Jogue novamente...')
+            cont += 1
+        else:
+            print('GAME OVER!')
+            break
+print(f'Você Ganhou {cont} vezes')
+
+
+
+
+
+
